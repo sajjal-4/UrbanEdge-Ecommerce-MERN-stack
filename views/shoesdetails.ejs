@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/productdetails.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="/" class="logo">UrbanEdge<span>.</span></a>
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/about">about</a>
+            <a href="/home#products">categories</a>
+            <a href="/contact">contact</a>
+            <% if (user) { %>
+                <a href="/logout">logout</a>
+            <% } else { %>
+                <a href="/signup">signUp/signIn</a>
+            <% } %>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="/cart" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+    </header>
+  <section class="product-detail">
+    <div class="container">
+      <div class="product-image">
+        <img src="<%= product.image %>" alt="<%= product.name %>">
+      </div>
+      <div class="product-info">
+        <h1><%= product.name %></h1>
+        <p class="description"><%= product.description %></p>
+        <p class="price">Price: $<%= product.price %></p>
+         <% if(product.discount) { %>
+          <p class="discount">Discount: <%= product.discount %></p>
+         <% } %>
+         <button class="add-cart-btn" onclick="addToCart('<%= product._id %>')"><b>ADD TO CART</b></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section starts here -->
+  <section class="footer" id="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+            <a href="/">home</a>
+            <a href="/about">about</a>
+            <a href="/#products">products</a>
+            <a href="#">review</a>
+            <a href="/contact">contact</a>
+    </div>
+        <div class="box">
+            <h3>extra links</h3>
+                <a href="#">my account</a>
+                <a href="cart.html">my order</a>
+                <a href="#">my favorite</a>   
+        </div>  
+        <div class="box">
+            <h3>locations</h3>
+                <span>India</span>
+                <span>USA</span>
+                <span>Japan</span>
+                <span>France</span>
+        </div>
+        <div class="box">
+            <h3>contact info</h3>
+                <span>+123-678-987</span>
+                <a href="#">urbanedge@gmail.com</a>
+                <span>Islamabad, Pakistan - 45000</span>
+        </div>
+    </div>
+    <div class="credit">Created by<span>Ms.Designer</span>|All Rights Reserved</div>
+  </section>
+    <!-- footer section ends here -->
+</body>
+</html>
