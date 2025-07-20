@@ -2,7 +2,7 @@
 
 **UrbanEdge** is a modern e-commerce web application built using Node.js, Express.js, MongoDB, and EJS for server-side rendering.  It aims to provide a seamless and intuitive shopping experience for users while offering a robust backend for managing products, users, and orders.
 
-Uploading 411315827-05f4d7ba-8f7f-432b-9f2e-e88104167096.mp4…
+https://github.com/user-attachments/assets/7470c1e6-d1c8-4a0b-98db-850a354ba6d4
 
 ## Features
 
